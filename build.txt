@@ -1,0 +1,4 @@
+displayName = No Hunger
+author = LongRamen
+version = 1.0
+includeSource = true
