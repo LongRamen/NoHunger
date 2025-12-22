@@ -2,3 +2,4 @@ displayName = No Hunger
 author = LongRamen
 version = 1.0
 includeSource = true
+homepage = https://github.com/LongRamen/NoHunger
