@@ -11,7 +11,6 @@ public class NoHunger : Mod
     {
         IL_Player.UpdateHungerBuffs += Hook_UpdateHungerBuffs;
         IL_Player.UpdateStarvingState += Hook_UpdateStarvingState;
-        IL_Player.UpdateBuffs += (ILContext) => { }; // for some incomprehensible reason this is necessary for the UpdateStarvingState hook to do anything
     }
 
     private static void Hook_UpdateHungerBuffs(ILContext il)
@@ -39,7 +38,7 @@ public class NoHunger : Mod
         {
             ILCursor c = new(il);
 
-            c.GotoNext(MoveType.After, i => i.Previous?.MatchLdloc0() ?? false && i.MatchBrtrue(out _));
+            c.GotoNext(MoveType.After, i => i.MatchLdloc0(), i => i.MatchBrtrue(out _));
             c.Prev.MatchBrtrue(out ILLabel label);
             c.EmitBr(label);
         }

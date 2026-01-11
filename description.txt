@@ -1,0 +1,5 @@
+Removes the hunger mechanic from Get Fixed Boi and The Constant worlds.
+
+I made this mod because I wanted to do a run of the GetFixedBoi seed but I found the hunger mechanic to just be annoying and not add much to the game.
+
+However, you can also use this mod in the Constant seed if you want to for some reason.
